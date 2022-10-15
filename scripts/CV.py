@@ -4,7 +4,7 @@ import cv2
 import rospy
 from two_link_arm.msg import Coords
 
-
+# phadke chutiya
 class computerVision():
 
     def _init_(self):
