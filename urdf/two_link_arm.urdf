@@ -13,7 +13,7 @@
 
 <robot name="two_link_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<gazebo reference="camera">
+<!-- <gazebo reference="camera">
     <sensor type="camera" name="camera">
       <update_rate>30.0</update_rate>
       <camera name="head">
@@ -29,9 +29,9 @@
         </clip>
         <noise>
           <type>gaussian</type>
-          <!-- Noise is sampled independently per pixel on each frame.
+          Noise is sampled independently per pixel on each frame.
                That pixel's noise value is added to each of its color
-               channels, which at that point lie in the range [0,1]. -->
+               channels, which at that point lie in the range [0,1].
           <mean>0.0</mean>
           <stddev>0.007</stddev>
         </noise>
@@ -51,7 +51,7 @@
         <distortionT2>0.0</distortionT2>
       </plugin>
     </sensor>
-  </gazebo>
+  </gazebo> -->
 
   <link name="base_link">
     <inertial>
@@ -93,8 +93,8 @@
     </collision>
   </link>
 
-  <!--Camera-->
-  <link name="camera">
+  <!-- Camera -->
+  <!-- <link name="camera">
     <visual>
       <geometry>
         <box size="0.02 0.02 0.02"/>
@@ -106,21 +106,21 @@
         <box size="0.02 0.02 0.02"/>
       </geometry>
     </collision>
-    <!-- <xacro:default_inertial mass="0.02"/> -->
+    <xacro:default_inertial mass="0.02"/>
     <mass
         value="0.02" />
-  </link>
+  </link> -->
 
-  <joint name="camera_joint" type="fixed">
-    <!-- <origin xyz="0.065 0 0.025" rpy="0 0 0"/> -->
-    <!-- <origin xyz="0.5 0.5 0.5" rpy="0 0 0"/> -->
+  <!-- <joint name="camera_joint" type="fixed">
+    <origin xyz="0.065 0 0.025" rpy="0 0 0"/>
+    <origin xyz="0.5 0.5 0.5" rpy="0 0 0"/>
     <origin xyz="0.5 0.5 0.5" rpy="0 1.57 0"/>
 
 
 
     <parent link="base_link"/>
     <child link="camera"/>
-  </joint>
+  </joint> -->
 
   <!-- <link
     name="Link_1">
