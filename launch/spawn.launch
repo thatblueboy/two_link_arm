@@ -16,7 +16,7 @@
         
         <!-- Spawn the robot model -->
         <!-- <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
-                args="-urdf robot_description -model two -x $(arg x) -y $(arg y) -z $(arg z)" /> -->
+                args="-urdf robot_description -model my_arm -x $(arg x) -y $(arg y) -z $(arg z)" /> -->
                 
         <node
         name="tf_footprint_base"
@@ -31,23 +31,23 @@
         args="-file $(find two_link_arm)/urdf/two_link_arm.urdf -urdf -model two_link_arm"
         output="screen" />
         
-        <node
+        <!-- <node
         name="fake_joint_calibration"
         pkg="rostopic"
         type="rostopic"
-        args="pub /calibrated std_msgs/Bool true" />
+        args="pub /calibrated std_msgs/Bool true" /> -->
         
         <!-- Load controllers -->
         <rosparam command="load" file="$(find two_link_arm)/config/joints.yaml" />
         
         <!-- Controllers -->
         <node name="controller_spawner" pkg="controller_manager" type="spawner"
-        respawn="false" output="screen" ns="/"
+        respawn="false" output="screen" ns="/my_arm"
         args="
         joint_state_controller
         joint1_position_controller
         joint2_position_controller
-        --timeout 60" />
+         --timeout 60" />
 
 </group>
         <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find two_link_arm)/urdf/two_link_arm.urdf" required="true"/> -->

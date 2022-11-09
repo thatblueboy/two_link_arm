@@ -122,7 +122,7 @@
     <child link="camera"/>
   </joint> -->
 
-  <!-- <link
+  <link
     name="Link_1">
     <inertial>
       <origin
@@ -260,7 +260,7 @@
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
-  </transmission> -->
+  </transmission>
 
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
