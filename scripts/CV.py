@@ -51,7 +51,7 @@ class computerVision():
         # self.publishCoords(cX, cY)
         # cv2.imshow("image", imgray)
         cv2.imshow("Image", img)
-        cv2.waitKey()
+        cv2.waitKey(3)
 
 
 
