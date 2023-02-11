@@ -188,7 +188,7 @@
     <model name='unit_cylinder'>
       <link name='link'>
         <inertial>
-          <mass>1</mass>
+          <mass>0.005</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
