@@ -8,7 +8,7 @@ $ roslaunch two_link_arm spawn.launch
 
 following command runs the controller for the arm:
 ```
-$ rosrun two_link_arm ik.py
+$ rosrun two_link_arm ik_algo.py
 ```
 
 The keys i, j, l, m can be used to incrementally increase or decrease x and y coordinates of end point in 3D space.
