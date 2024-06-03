@@ -1,6 +1,7 @@
 # Two Link Arm
   A simple two link arm controlled using ROS controls and simulated in Gazebo.
   
+  <img src="https://github.com/thatblueboy/two_link_arm/assets/100462736/59723baf-f7cd-4626-bf6e-affd8a6280af" width="90%"></img>
  After cloning the package and building in ROS workspace, following command can be used to run simulation in gazebo:
 ```
 $ roslaunch two_link_arm spawn.launch
